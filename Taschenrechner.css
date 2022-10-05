@@ -1,0 +1,43 @@
+#taschenrechner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;
+    width: 25vh;
+    height: 50vh;
+    margin: auto;
+    flex-direction: row;
+    border: solid;
+    background-color: lightgray;
+}
+
+#ausgabefeld {
+    width: 80%;
+}
+
+#nummernUndZeichen {
+    display: flex;
+}
+
+#nummern {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 66%;
+}
+
+#zeichen {
+    width: 33%;
+}
+
+.nummern {
+    width: 33%;
+}
+
+.zeichen{
+    width: 100%;
+}
+
+
+
+
