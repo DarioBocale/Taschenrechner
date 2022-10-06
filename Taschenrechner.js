@@ -1,5 +1,8 @@
 function addNumber(number) {
     let input = document.getElementById("eingabefeld");
+    if(input.value === "0"){
+        input.value = "";
+    }
     input.value = input.value + number
 }
 
@@ -10,7 +13,6 @@ function addOperation(operation) {
 
 function clearText() {
     document.getElementById("eingabefeld").value = "0";
-    document.getElementById("ausgabefeld").value = "0";
 }
 
 function calculate() {
