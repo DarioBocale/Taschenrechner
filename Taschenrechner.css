@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: space-around;
-    width: 25vh;
+    width: 40vh;
     height: 50vh;
     margin: auto;
     flex-direction: row;
@@ -11,12 +11,34 @@
     background-color: lightgray;
 }
 
-#ausgabefeld {
-    width: 80%;
+#eingabe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
 }
 
-#nummernUndZeichen {
+#eingabefeld {
+    width: 80%;
+    height: 5vh;
+    border: solid;
+    text-align: right;
+    font-size: 150%;
+}
+
+#eingabetasten {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#zusatzzeichen {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 3vh;
 }
 
 #nummern {
@@ -24,19 +46,39 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 66%;
+    height: 15vh;
 }
 
 #zeichen {
     width: 33%;
+    height: 15vh;
+}
+
+#addieren {
+    flex-grow: 1;
 }
 
 .nummern {
     width: 33%;
+    height: 25%;
 }
 
 .zeichen{
     width: 100%;
+    height: 25%;
 }
+
+.zusatzzeichen {
+    width: 33%;
+}
+
+button {
+    font-weight: bold;
+}
+
+
+
+
 
 
 

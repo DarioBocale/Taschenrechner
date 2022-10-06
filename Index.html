@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <title>Taschenrechner</title>
     <link rel="stylesheet" href="Taschenrechner.css"/>
+    <script src="Taschenrechner.js"></script>
 </head>
 <body>
     <div id="taschenrechner">
-        <div id="ausgabe">
-            <input id="ausgabefeld" type="text" readonly/>
+        <div id="eingabe">
+            <input id="eingabefeld" type="text" readonly value="0"/>
         </div>
-        <div id="zusatzzeichen">
-            <button class="zusatzzeichen" id="vorzeichen">+/-</button>
-            <button class="zusatzzeichen" id="prozent">%</button>
-            <button class="zusatzzeichen" id="wurzel">&#8730</button>
-        </div>
-        <div id="nummernUndZeichen">
+        <div id="eingabetasten">
+            <button id="clear" onclick="clearText()">clear</button>
+            <div id="zusatzzeichen">
+                <button class="zusatzzeichen" id="vorzeichen">+/-</button>
+                <button class="zusatzzeichen" id="prozent">%</button>
+                <button class="zusatzzeichen" id="wurzel">&#8730</button>
+            </div>
             <div id="nummern">
-                <button class="nummern" id="eins">1</button>
-                <button class="nummern" id="zwei">2</button>
-                <button class="nummern" id="drei">3</button>
-                <button class="nummern" id="vier">4</button>
-                <button class="nummern" id="fuenf">5</button>
-                <button class="nummern" id="sechs">6</button>
-                <button class="nummern" id="sieben">7</button>
-                <button class="nummern" id="acht">8</button>
-                <button class="nummern" id="neun">9</button>
-                <button class="nummern" id="null">0</button>
+                <button class="nummern" id="eins" onclick="addNumber(1)">1</button>
+                <button class="nummern" id="zwei" onclick="addNumber(2)">2</button>
+                <button class="nummern" id="drei" onclick="addNumber(3)">3</button>
+                <button class="nummern" id="vier" onclick="addNumber(4)">4</button>
+                <button class="nummern" id="fuenf" onclick="addNumber(5)">5</button>
+                <button class="nummern" id="sechs" onclick="addNumber(6)">6</button>
+                <button class="nummern" id="sieben" onclick="addNumber(7)">7</button>
+                <button class="nummern" id="acht" onclick="addNumber(8)">8</button>
+                <button class="nummern" id="neun" onclick="addNumber(9)">9</button>
+                <button class="nummern" id="null" onclick="addNumber(0)">0</button>
+                <button class="nummern" id="punkt" onclick="addNumber('.')">.</button>
+                <button class="nummern" id="gleich" onclick="calculate()">=</button>
             </div>
             <div id="zeichen">
-                <button class="zeichen" id="dividieren">/</button>
-                <button class="zeichen" id="multiplizieren">*</button>
-                <button class="zeichen" id="subtrahieren">-</button>
-                <button class="zeichen" id="addieren">+</button>
+                <button class="zeichen" id="dividieren" onclick="addOperation('/')">/</button>
+                <button class="zeichen" id="multiplizieren" onclick="addOperation('*')">*</button>
+                <button class="zeichen" id="subtrahieren" onclick="addOperation('-')">-</button>
+                <button class="zeichen" id="addieren" onclick="addOperation('+')">+</button>
             </div>
         </div>
     </div>
