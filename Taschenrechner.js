@@ -16,6 +16,13 @@ function clearText() {
 }
 
 function calculate() {
+
     let input = document.getElementById("eingabefeld");
-    input.value = eval(input.value);
+    let calculation;
+    try{
+        input.value = eval(input.value);
+    } catch (error) {
+        input.value = "Error!"
+        setTimeout(clearText, 1500);
+    }
 }
